@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function OnTables({qtyTable}) {
+export default function StatusTable({qtyTable}) {
     return (
         <div className="mt-4">
             <div><i className="bi bi-square-fill fs-5 text-success"></i> โต๊ะว่าง</div>

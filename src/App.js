@@ -2,7 +2,7 @@ import react, { useState, useEffect } from 'react';
 import Header from './components/Header'
 import './App.css';
 import Table from './components/Table';
-import OnTables from './components/OnTables';
+import StatusTable from './components/StatusTable';
 import Modal_Payment from './components/Modal_Payment';
 import table from './data/table';
 
@@ -74,10 +74,10 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-md-9 mb-2 text-center">
-            {tableElements}
+            {tableElements} 
           </div>
           <div className="col-md-3 ">
-            <OnTables qtyTable={qtyTable} />
+            <StatusTable qtyTable={qtyTable} />
           </div>
           <Modal_Payment
             show={modalShow}
