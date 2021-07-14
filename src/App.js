@@ -1,7 +1,7 @@
-import react, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header'
 import './App.css';
-import Table from './components/Table';
+import AllTables from './components/AllTables';
 import StatusTable from './components/StatusTable';
 import Modal_Payment from './components/Modal_Payment';
 import table from './data/table';
@@ -62,11 +62,6 @@ function App() {
     setModalShow(true);
   }
 
-  let tableElements = (
-    numberTables.map((numberTable) =>
-      <Table key={numberTable.number} numberTable={numberTable} updateTables={updateTables} onPayment={onPayment} />
-    )
-  )
 
   return (
     <div className="App">
@@ -74,7 +69,9 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-md-9 mb-2 text-center">
-            {tableElements} 
+            <AllTables numberTables={numberTables}
+              updateTables={updateTables}
+              onPayment={onPayment} />
           </div>
           <div className="col-md-3 ">
             <StatusTable qtyTable={qtyTable} />

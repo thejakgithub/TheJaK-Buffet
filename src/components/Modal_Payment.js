@@ -62,9 +62,6 @@ function Modal_Edit(props) {
     event.preventDefault();
     setCash('');
     setIsWithdraw(false);
-    window.setTimeout(function () {
-      document.getElementById('cashEl').focus();
-    }, 0);
 
   }
   function closePayment() {
